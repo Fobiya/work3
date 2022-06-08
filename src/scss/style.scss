@@ -2157,6 +2157,14 @@ section.home__8{
   position: relative;
 
   @include wid(992)  { padding: 75px 0; }
+  
+  .title{
+    color: #4D3F3A;
+    font: 500 28px/1em var(--a);
+    margin-bottom: 45px;
+    text-align: center;
+    text-transform: uppercase;
+  }
 
   .box__content{
 
@@ -2167,8 +2175,7 @@ section.home__8{
     margin: 0 auto;
 
     .images{
-      max-width: 165px;
-      min-width: 165px;
+    max-width: 300px;
       width: 100%;
       height: auto;
       margin-left: auto;
