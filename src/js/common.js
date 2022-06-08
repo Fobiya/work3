@@ -2465,8 +2465,8 @@ function hasScrolled() {
   infinite: false,
   speed: 300,
   slidesToShow: 1,
-  slidesToScroll: 2,
-      adaptiveHeight: true,
+  slidesToScroll: 1,
+      adaptiveHeight: false,
        customPaging: function(slider, i) {
       // this example would render "tabs" with titles
       return '<span class="dot"></span>';
@@ -2477,6 +2477,72 @@ function hasScrolled() {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+  
+  
+  
+  
+  
+  
+    $('#slider__big').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+//        asNavFor: '#slider__smoll'
+         
+            dots: true,
+      });
+  
+  
+  
+
+ $('.home__5_slider_big').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+  dots: false,
+    asNavFor: '.home__5_slider_smoll'
+  });
+  
+$('.home__5_slider_smoll').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  asNavFor: '.home__5_slider_big',
+  dots: true,
+  centerMode: true,
+  focusOnSelect: true,
+  arrows: false,
+  
+    responsive: [
+    {
+      breakpoint: 1100,
+      settings: {
+  dots: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+      }
+    },
+    {
+      breakpoint: 701,
+      settings: {
+   dots: true,
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 500,
+      settings: {
+      dots: true,
+        slidesToShow: 2,
+        slidesToScroll: 2
       }
     }
     // You can unslick at a given breakpoint now by adding:

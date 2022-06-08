@@ -49,9 +49,11 @@ module.exports = {
             loader: 'url-loader',
             loader: 'file-loader',
             options: { 
-                limit: 8000, // Convert images < 8kb to base64 strings
+                limit: 13192, // Convert images < 8kb to base64 strings
 //                name: 'img/[hash].[ext]'
-                name: 'img/[name].[ext]',
+              
+//             filename: `${PATHS.assets}img/[name].webp`,
+                name: 'img/[name].webp',
              publicPath: '../',
           outputPath:'',
           useRelativePath: true
@@ -83,26 +85,42 @@ module.exports = {
       {
         test: /\.(svg)$/,  
         use: [{
+          
+                      loader: 'url-loader',
+//           loader: 'svg-url-loader',
 //          loader: 'file-loader',
-          loader: 'image-webpack-loader',
+
             options: { 
-
-//                name: 'img/[hash].[ext]'
-                name: 'img/[name].[ext]',
-
+              limit: 8192,
+              
+////             filename: `${PATHS.assets}img/[name].[ext]`,
+//             name: 'img/[name].[ext]',
+//             publicPath: '../',
+//                fallback: "file-loader",
+//                          iesafe: true,
+//                encoding: "base64",
+//              esModule: false,
+              
+             filename: `${PATHS.assets}img/[name].[ext]`,
+             name: "img/[name].[ext]",
+             publicPath: '../',
+          outputPath:'',
+          useRelativePath: true
+              
+              
             } 
         }]
       },    
 
     {
       // Match woff2 in addition to patterns like .woff?v=1.1.1.
-      test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+      test: /\.(woff(2)?|ttf|eot)(\?v=\d+\.\d+\.\d+)?$/,
       use: {
         loader: "url-loader",
 //        loader: "file-loader",
         options: {
           // Limit at 50k. Above that it emits separate files
-          limit: 5000,
+          limit: 8192,
 
           // url-loader sets mimetype if it's passed.
           // Without this it derives it from the file extension
@@ -182,7 +200,6 @@ module.exports = {
 //    }),
     // Copy HtmlWebpackPlugin and change index.html for another html page
     new HtmlWebpackPlugin({
-
 //      hash: false,
       template: `${PATHS.src}/index.pug`,
       filename: './index.html',
@@ -190,18 +207,45 @@ module.exports = {
     }),    
 //    new HtmlWebpackPlugin({
 //      hash: false,
-//      template: `${PATHS.src}/product.pug`,
-//      filename: './product.html'
+//      template: `${PATHS.src}/home.pug`,
+//      filename: './home.html'
+//    }),       
+//    new HtmlWebpackPlugin({
+//      hash: false,
+//      template: `${PATHS.src}/404.pug`,
+//      filename: './404.html'
+//    }),
+//    new HtmlWebpackPlugin({
+//      hash: false,
+//      template: `${PATHS.src}/shop.pug`,
+//      filename: './shop.html'
+//    }),  
+//    new HtmlWebpackPlugin({
+//      hash: false,
+//      template: `${PATHS.src}/single.pug`,
+//      filename: './single.html'
 //    }),    
+//    new HtmlWebpackPlugin({
+//      hash: false,
+//      template: `${PATHS.src}/catalog.pug`,
+//      filename: './catalog.html'
+//    }),      
+//    new HtmlWebpackPlugin({
+//      hash: false,
+//      template: `${PATHS.src}/cart.pug`,
+//      filename: './cart.html'
+//    }),        
+//    
+    
 //    new HtmlWebpackPlugin({
 //      hash: false,
 //      template: `${PATHS.src}/500.html`,
 //      filename: './500.html'
 //    }),
     new CopyWebpackPlugin([
-//      { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
+      { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/static`, to: '' },
-      { from: `${PATHS.src}/img`, to: 'img' },
+//      { from: `${PATHS.src}/img`, to: 'img' },
 //      { from: `${PATHS.src}/css`, to: 'css' }
 //      { from: `${PATHS.src}/fonts`, to: 'fonts' }        
     ])
