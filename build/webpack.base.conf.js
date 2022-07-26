@@ -28,7 +28,9 @@ module.exports = {
   },
   module: {
 
-    rules: [{
+    rules: [
+
+      {
       test: /\.js$/,
       loader: 'babel-loader',
       exclude: '/node_modules/'
@@ -200,52 +202,46 @@ module.exports = {
 //    }),
     // Copy HtmlWebpackPlugin and change index.html for another html page
     new HtmlWebpackPlugin({
+
 //      hash: false,
       template: `${PATHS.src}/index.pug`,
       filename: './index.html',
     
     }),    
-//    new HtmlWebpackPlugin({
-//      hash: false,
-//      template: `${PATHS.src}/home.pug`,
-//      filename: './home.html'
-//    }),       
-//    new HtmlWebpackPlugin({
-//      hash: false,
-//      template: `${PATHS.src}/404.pug`,
-//      filename: './404.html'
-//    }),
-//    new HtmlWebpackPlugin({
-//      hash: false,
-//      template: `${PATHS.src}/shop.pug`,
-//      filename: './shop.html'
-//    }),  
-//    new HtmlWebpackPlugin({
-//      hash: false,
-//      template: `${PATHS.src}/single.pug`,
-//      filename: './single.html'
-//    }),    
-//    new HtmlWebpackPlugin({
-//      hash: false,
-//      template: `${PATHS.src}/catalog.pug`,
-//      filename: './catalog.html'
-//    }),      
-//    new HtmlWebpackPlugin({
-//      hash: false,
-//      template: `${PATHS.src}/cart.pug`,
-//      filename: './cart.html'
-//    }),        
-//    
+
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/om-guardio.pug`,
+      filename: './om-guardio.html'
+    }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/red-gdpr.pug`,
+      filename: './red-gdpr.html'
+    }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/accessories.pug`,
+      filename: './accessories.html'
+    }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/twiceme.pug`,
+      filename: './twiceme.html'
+    }),
     
+   
 //    new HtmlWebpackPlugin({
 //      hash: false,
 //      template: `${PATHS.src}/500.html`,
 //      filename: './500.html'
 //    }),
+    
+    
     new CopyWebpackPlugin([
       { from: `${PATHS.src}/img`, to: `${PATHS.assets}img` },
       { from: `${PATHS.src}/static`, to: '' },
-//      { from: `${PATHS.src}/img`, to: 'img' },
+//      { from: `${PATHS.src}/video`, to: 'video' },
 //      { from: `${PATHS.src}/css`, to: 'css' }
 //      { from: `${PATHS.src}/fonts`, to: 'fonts' }        
     ])

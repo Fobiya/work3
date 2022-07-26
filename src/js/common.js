@@ -69,7 +69,11 @@ define(["jquery"], function($) {
             $('body').removeClass("open__menu");
     });
 
+  
+      $('.box__select').click(function() {
+        $(".box__select").toggleClass("sel");
 
+      });
 
 
     // END NAVIGATION MENU LEFT    
@@ -2550,6 +2554,56 @@ $('.home__5_slider_smoll').slick({
     // instead of a settings object
   ]
 });
+  
+  
+  
+    var $om__guardio = $('#om__guardio'); 
+  
+  $om__guardio.slick({
+      arrows: false, 
+      dots: true,
+      infinite: false,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      adaptiveHeight: false,
+       customPaging: function(slider, i) {
+      // this example would render "tabs" with titles
+      return '<span class="dots_line"></span>';
+    },
+    
+    responsive: [
+    {
+      breakpoint: 1100,
+      settings: {
+  dots: true,
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 701,
+      settings: {
+   dots: true,
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: 500,
+      settings: {
+      dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+  
+  
   
   
 //  
