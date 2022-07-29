@@ -229,6 +229,12 @@ module.exports = {
       template: `${PATHS.src}/twiceme.pug`,
       filename: './twiceme.html'
     }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/safety-glasses.pug`,
+      filename: './safety-glasses.html'
+    }),
+    
     
    
 //    new HtmlWebpackPlugin({

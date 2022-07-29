@@ -3744,8 +3744,7 @@ section.products__1{
 
 }
 
-
-  section.products__2{
+section.products__2{
 
 //  background: #fff url(../img/products__1_back.png) no-repeat top center/cover;
   background: #fff;
@@ -3844,6 +3843,10 @@ section.products__1{
       
 @include wid(601-991)  {     order: 2;  justify-content: center;   min-height: 180px;  }
 @include wid(600)  {  order: 2;  justify-content: center;  }
+      
+      a{
+        display: flex;
+      }
       
       
       img{
@@ -4199,6 +4202,412 @@ section.products__1{
     
     
 }
+
+
+  section.safety-glasses__1{
+  
+  //  background: #fff url(../img/products__1_back.png) no-repeat top center/cover;
+ background: #B77372 url(../img/safety-glasses__1_back.png) no-repeat top center/cover;
+  position: relative;
+
+  height: 100%; 
+
+    
+@include wid(992)  {  padding: 200px 0 175px;  }
+@include wid(601-991)  {   min-height: 400px;  padding: 150px 0 70px;  }
+@include wid(600)  {   min-height: 400px; padding: 100px 0 50px;  }
+    
+    
+    &>.container{
+      max-width: 1750px;
+    }
+    
+    
+   .title{
+
+      color: #FFFFFF;
+      letter-spacing: -0.03em;
+      margin-bottom: 40px;
+
+      @include wid(992) { font: 200 36px/1.2em var(--a); }
+      @include wid(601-991) { font: 200 32px/1.2em var(--a); }
+      @include wid(600) {  font: 200 28px/1.2em var(--a); }
+     
+     span{
+       font-weight: 700;
+     }
+
+    }
+
+  p{
+      color: #FFFFFF;
+
+      @include wid(992)  {font: 100 23px/1.2em var(--a); } 
+      @include wid(601-991)  { font: 100 20px/1.2em var(--a); }
+      @include wid(600)      { font: 100 18px/1.2em var(--a); }
+
+    }
+}
+
+  section.safety-glasses__2{
+  
+  //  background: #fff url(../img/products__1_back.png) no-repeat top center/cover;
+// background: #B77372 url(../img/safety-glasses__1_back.png) no-repeat top center/cover;
+    
+    background: #fff;
+  position: relative;
+
+  height: 100%; 
+    
+      padding: 50px 0 60px; 
+    
+@include wid(992)  {    }
+@include wid(601-991)  {    }
+@include wid(600)  {    }
+    
+    
+
+    
+   .title{
+
+      color: #000000;
+
+      letter-spacing: -0.03em;
+      margin-bottom: 25px;
+
+      @include wid(992) { font: 700 24px/1.2em var(--a); }
+      @include wid(601-991) { font: 700 24px/1.2em var(--a); }
+      @include wid(600) {  font: 700 24px/1.2em var(--a); }
+     
+     span{
+       font-weight: 700;
+     }
+
+    }
+
+  p{
+    
+      color: #000000;    
+
+      @include wid(992)  {font: 400 18px/1.2em var(--a); } 
+      @include wid(601-991)  { font: 400 18px/1.2em var(--a); }
+      @include wid(600)      { font: 400 18px/1.2em var(--a); }
+
+    }
+    
+    .block__{
+      max-width: 330px;
+      width: 100%;
+//      min-height: 451px;
+      height: 451px;
+      
+      padding: 30px;
+      
+      @include wid(991)  {  margin: 0 auto 35px;}
+
+      background: #FFFFFF;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 6px;
+      
+      display: flex;
+      flex-direction: column;
+
+      
+      align-items: stretch;
+      
+      p{
+       font: 400 16px/1.2em var(--a);
+      }
+      
+      .title{
+         margin-bottom: 0;
+        
+        white-space:nowrap;
+        
+  
+  overflow: hidden; 
+
+  text-overflow: ellipsis; 
+   
+          
+      }
+      
+      .img__{
+        max-height: 150px;
+        height: 100%;
+        width: auto;
+      }
+      
+      .more{
+        color: #FF6720;
+        
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        
+        margin-right: 0;
+        
+        margin-bottom:  10px;
+        margin-top: auto;
+
+          &:after{
+            @extend %bef-aft;
+
+            background: url(../img/arrow-r.svg) no-repeat;
+
+            width: 8px;
+            height: 14px;
+            margin-left: 12px;
+          }
+
+        
+      }
+      
+      .price{
+        color: #000;
+        font: 700 32px/1.2em var(--a);
+        text-align: right;
+//        margin-top: auto;
+            margin-top: 0;
+      }
+    }
+    
+
+    
+    
+}
+
+  section.safety-glasses__3{
+  background: #024383;
+  //  background: #fff url(../img/products__1_back.png) no-repeat top center/cover;
+// background: #B77372 url(../img/safety-glasses__1_back.png) no-repeat top center/cover;
+  position: relative;
+
+  height: 100%; 
+    
+     padding: 50px 0 30px; 
+    
+@include wid(992)  {    }
+@include wid(601-991)  {    }
+@include wid(600)  {    }
+    
+    
+     &>.container:nth-child(1){
+       max-width: 1650px;
+       
+    }
+    
+    
+   .title{
+
+      color: #FFFFFF;
+      letter-spacing: -0.03em;
+      margin-bottom: 40px;
+
+      @include wid(992) { font: 200 36px/1.2em var(--a); }
+      @include wid(601-991) { font: 200 32px/1.2em var(--a); }
+      @include wid(600) {  font: 200 28px/1.2em var(--a); }
+     
+     span{
+       font-weight: 700;
+     }
+
+    }
+
+    p{
+      color: #FFFFFF;
+      margin-bottom: 25px;
+
+      @include wid(992)  {font: 100 20px/1.2em var(--a); } 
+      @include wid(601-991)  { font: 100 28px/1.2em var(--a); }
+      @include wid(600)      { font: 100 16px/1.2em var(--a); }
+
+    }
+    
+  
+    .list{
+      display: flex;
+      
+      gap: 0 15px;
+      
+      justify-content: space-between;
+      
+      margin-top: 37px;
+      
+      flex-wrap: wrap;
+      
+          @include wid(992-1199)  {  justify-content: center;  }
+      
+    @include wid(991)  {   justify-content: center;  }
+      
+
+      
+          @include wid(600)  {      gap: 0 30px;  }
+      
+    counter-reset: list1;
+      
+      li{
+        text-align: center;
+        
+        padding-left: 30px;
+        
+        @include wid(992-1199)  { height: 210px; margin-bottom: 30px; }
+        
+              @include wid(991)  {  height: 210px; margin-bottom: 30px; }
+        
+        img{
+            width: auto;
+            height: 107px;
+            margin-bottom: 15px;
+          }
+        p{
+          color: #fff;
+          font: 100 16px/1.2em var(--a);
+        }
+        
+          &:before{
+            @extend %bef-aft;
+
+            background: url(../img/safety-glasses__3_before.svg) no-repeat;
+
+            width: 61px;
+            height: 66px;
+          /* Увеличиваем значение счетчика вложенного списка */
+          counter-increment: list1;
+          /* Увеличиваем значение счетчика */
+          content: counter(list1) " ";
+
+            color: #fff;
+
+            font: 700 40px/1.2em var(--a);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            margin-left: -40px;
+            
+            margin-bottom: -25px;
+
+
+
+          }
+
+        
+        
+      }
+      
+
+    }
+    
+    
+    form{
+      
+      input {
+        min-height: 48px;
+        max-height: 48px;
+        background: #FFFFFF;
+        border-radius: 4px;
+        margin-bottom: 15px;
+      }
+      
+      .width__border{
+        @extend %button;
+        
+        border: 2px solid #FFFFFF;
+        background: transparent;
+        border-radius: 6px;
+        
+        max-height: 48px;
+        min-height: 48px;
+        
+    width: clamp(215px,100vw,215px);
+        
+        color: #fff;
+        
+        font: 600 19px/1.2em var(--a);
+        
+        margin-top: 55px;
+        
+        margin-left: auto;
+        
+        
+        
+        
+  &:after{
+    @extend %bef-aft;
+
+    background: url(../img/arrow-width.svg) no-repeat;
+
+    width: 24px;
+    height: 24px;
+    margin-left: 14px;
+  }
+        
+        
+        &:hover{
+          background: #ff6720;
+                  border: 2px solid #ff6720;
+        }
+        
+        
+      }
+    }
+    
+    
+}
+
+
+
+  section.twiceme__1{
+  
+  //  background: #fff url(../img/products__1_back.png) no-repeat top center/cover;
+ background: #F3EBE7;
+ position: relative;
+
+  height: 100%; 
+
+    
+@include wid(992)  {  padding: 200px 0 175px;  }
+@include wid(601-991)  {   min-height: 400px;  padding: 150px 0 70px;  }
+@include wid(600)  {   min-height: 400px; padding: 100px 0 50px;  }
+    
+    
+    &>.container{
+      max-width: 1750px;
+    }
+    
+    
+   .title{
+
+      color: #000000;
+      letter-spacing: -0.03em;
+      margin-bottom: 40px;
+
+      @include wid(992) { font: 200 36px/1.2em var(--a); }
+      @include wid(601-991) { font: 200 32px/1.2em var(--a); }
+      @include wid(600) {  font: 200 28px/1.2em var(--a); }
+     
+     span{
+       font-weight: 700;
+     }
+
+    }
+
+  p{
+      color: #000000;
+
+      @include wid(992)  {font: 100 23px/1.2em var(--a); } 
+      @include wid(601-991)  { font: 100 20px/1.2em var(--a); }
+      @include wid(600)      { font: 100 18px/1.2em var(--a); }
+
+    }
+    
+    
+}
+
+ 
 
 
 // ===========================================================
