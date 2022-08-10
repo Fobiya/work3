@@ -234,6 +234,11 @@ module.exports = {
       template: `${PATHS.src}/safety-glasses.pug`,
       filename: './safety-glasses.html'
     }),
+    new HtmlWebpackPlugin({
+      hash: false,
+      template: `${PATHS.src}/shop.pug`,
+      filename: './shop.html'
+    }),
     
     
    
